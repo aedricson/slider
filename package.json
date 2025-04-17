@@ -5,7 +5,7 @@
   "homepage": "https://aedricson.github.io/slider",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build --public-url=/dist/"
+    "build": "parcel build --public-url=./"
   },
   "license": "ISC",
   "devDependencies": {
