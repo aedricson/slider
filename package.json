@@ -2,9 +2,10 @@
   "name": "slider",
   "version": "1.0.0",
   "source": "src/index.html",
+  "homepage": "https://aedricson.github.io/slider",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build --public-url=/dist/"
   },
   "license": "ISC",
   "devDependencies": {
