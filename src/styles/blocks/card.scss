@@ -1,0 +1,80 @@
+@use '../utils/variables';
+@use '../utils/mixins';
+
+.card {
+  flex: 0 0 calc(50% - 20px);
+
+  &__image {
+    width: 865px;
+    height: 525px;
+  }
+
+  &__info {
+    @include mixins.space-between-positioning;
+    align-items: center;
+
+    position: absolute;
+    left: 28px;
+    right: 20px;
+    bottom: -48px;
+    padding: 22px 46px 22px 56px;
+
+    background-color: #fff;
+    border-bottom: 3px solid variables.$border-secondary-color;
+
+    filter: drop-shadow(0 25px 14px variables.$shadow-color);
+  }
+
+  &__price {
+    margin-bottom: 14px;
+
+    @include  mixins.text-styling(43px, -1.32px);
+  }
+
+  &__address {
+    @include  mixins.text-styling(18px, 3.6px);
+  }
+
+  &__group-right {
+    text-align: end;
+  }
+
+  &__group-right-info {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 14px;
+  }
+
+  &__separator {
+    background-color: variables.$border-info-color;
+  }
+
+  &__info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    color: variables.$info-color;
+    letter-spacing: 1.32px;
+  
+    &--square {
+      color: variables.$info-additional-color;
+
+      & :first-child {
+        letter-spacing: -2.04px;
+      }
+    }
+  }
+
+  &__info-count {
+    @include mixins.text-styling(30px, 3px);
+  }
+
+  &__details-button::after {
+    @include mixins.icon-placement('../assets/icons/icon_arrow-right.svg');
+
+    margin-left: 14px;
+
+    align-self: self-end;
+  }
+}

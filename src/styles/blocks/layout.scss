@@ -1,0 +1,19 @@
+@use '../utils/mixins.scss';
+
+.layout {
+  @include mixins.space-between-positioning;
+
+  &__rectangle {
+    flex-basis: 54%;
+
+    @include mixins.background-image('../assets/images/layout_rectangle.png');
+
+    background-position: 0px 18px;
+  }
+
+  &__grid {
+    flex-basis: 46%;
+
+    @include mixins.background-image('../assets/images/grid-layout.png');
+  }
+}

@@ -1,0 +1,21 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+.button {
+  padding: 10px 20px;
+
+  background-color: inherit;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    background-color: variables.$hover-color;
+  }
+
+  &__separator {
+    background-color: variables.$border-secondary-color;
+  }
+}

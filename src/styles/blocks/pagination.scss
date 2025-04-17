@@ -1,0 +1,22 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+.pagination {
+  @include mixins.space-between-positioning;
+
+  gap: 6px;
+
+  &__item {
+    @include mixins.rectangle(
+      variables.$pagination-item-height,
+      variables.$pagination-item-width
+    );
+
+    background-color: variables.$border-secondary-color;
+    transition: 0.2s ease-in-out;
+
+    &--active {
+      background-color: variables.$border-main-color;
+    }
+  }
+}

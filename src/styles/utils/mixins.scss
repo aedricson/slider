@@ -1,0 +1,36 @@
+@use './variables.scss';
+
+@mixin absolute-positioning() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin space-between-positioning {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin background-image($url) {
+  background-image: url($url);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin rectangle($height, $width) {
+  height: $height;
+  width: $width;
+}
+
+@mixin icon-placement($url) {
+  content: url($url);
+
+  @include rectangle(variables.$icon-height, variables.$icon-width)
+}
+
+@mixin text-styling($size, $spacing) {
+  font-size: $size;
+  letter-spacing: $spacing;
+}

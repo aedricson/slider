@@ -1,0 +1,92 @@
+@use '../utils/variables.scss';
+@use '../utils/mixins.scss';
+
+.favorites {
+  padding-top: 140px;
+
+  &__layout {
+    @include mixins.absolute-positioning;
+
+    z-index: 1;
+  }
+
+  &__container {
+    padding-inline: 85px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__top {
+    margin-bottom: 56px;
+    padding-left: 112px;
+  }
+
+  &__pre-title {
+    font-size: 24px;
+    color: variables.$secondary-color;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    font-size: 60px;
+    letter-spacing: 1.93px;
+    font-weight: inherit;
+
+    &-accent {
+      margin-bottom: 14px;
+
+      font-weight: 500;
+    }
+  }
+
+  &__controls {
+    @include mixins.space-between-positioning;
+
+    align-items: center;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2px;
+  }
+
+  &__button {
+    &--prev {
+      &::before {
+        @include mixins.icon-placement('../assets/icons/icon_arrow-left.svg');
+
+        margin-right: 16px;
+      }
+    }
+
+    &--next {
+      &::after {
+        @include mixins.icon-placement('../assets/icons/icon_arrow-right.svg');
+
+        margin-left: 16px;
+      }
+    }
+  }
+
+  &__cards {
+    margin-bottom: 116px;
+
+    transition: 0.2s ease-in-out;
+  }
+
+  &__slider-wrap {
+    overflow: hidden;
+  }
+
+  &__bottom-button {
+    padding: 12px 40px;
+
+    text-align: right;
+    font-weight: 300;
+  }
+
+  &__view-all-button {
+    border-bottom: 2px solid variables.$border-main-color;
+  }
+}

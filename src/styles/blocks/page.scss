@@ -1,0 +1,15 @@
+@use '../utils/variables.scss';
+
+.page {
+  font-size: variables.$main-font-size;
+  scroll-behavior: smooth;
+
+  &__body {
+    margin-bottom: 140px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: variables.$main-font-weight;
+    letter-spacing: variables.$main-letter-spacing;
+    text-transform: uppercase;
+    color: variables.$main-color;
+  }
+}

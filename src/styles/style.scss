@@ -1,0 +1,13 @@
+@use 'scss-reset/light';
+@use './utils/variables';
+@use './utils/mixins';
+
+@use './blocks/layout';
+@use './blocks/favorites';
+@use './blocks/pagination';
+@use './blocks/separator';
+@use './blocks/button';
+@use './blocks/cards';
+@use './blocks/card';
+@use './blocks/page';
+
